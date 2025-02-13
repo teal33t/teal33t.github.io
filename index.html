@@ -14,101 +14,148 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Titillium+Web&display=swap" rel="stylesheet">
 	<style>
-		* {
-			font-family: 'Babylonica', cursive;
-			font-family: 'Titillium Web', sans-serif;
-		}
+       * {
+            font-family: 'Babylonica', cursive;
+            font-family: 'Titillium Web', sans-serif;
+        }
 
-		/* Add custom styles */
-		.primary-color {
-			background-color: #124968 !important;
-		}
+        .primary-color {
+            background-color: #124968 !important;
+        }
 
-		.avatar {
-			width: 150px;
-			height: 150px;
-			border-radius: 50%;
-			margin: 0 auto;
-			display: block;
-		}
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
 
-		.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-			color: #124968;
-			margin: 0px;
-			text-transform: none;
-		}
+        .avatar:hover {
+            transform: scale(1.05);
+        }
 
-		.links-section {
-			padding: 20px;
-			background-color: #f5f5f5;
-			border-radius: 8px;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		}
+        .links-section {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin: 20px 0;
+        }
 
-		.links-section h4 {
-			font-size: 24px;
-			margin-bottom: 20px;
-			color: #124968;
-		}
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
-		.links-section a {
-			display: flex;
-			align-items: center;
-			margin: 15px 0;
-			color: #333;
-			text-decoration: none;
-			font-size: 16px;
-			transition: color 0.3s ease;
-		}
+        .links-section a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            background: #f8f9fa;
+            text-align: center;
+            height: 100px;
+        }
 
-		.links-section a:hover {
-			color: #124968;
-			text-decoration: none;
-		}
+        .links-section a:hover {
+            background: #124968;
+            color: white;
+            transform: translateY(-2px);
+        }
 
-		.links-section a i {
-			margin-right: 10px;
-			color: #124968;
-			font-size: 20px;
-		}
+        .links-section a i {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
 
-		.about-section {
-			font-size: 18px;
-			line-height: 1.6;
-			padding: 20px;
-			background-color: #f5f5f5;
-			border-radius: 8px;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		}
+        .links-section a:hover i {
+            color: white;
+        }
 
-		.about-section h4 {
-			font-size: 24px;
-			margin-bottom: 20px;
-			color: #124968;
-		}
+        .about-section {
+            font-size: 16px;
+            line-height: 1.8;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin: 20px 0;
+        }
 
-		.medium-posts {
-			margin-top: 20px;
-		}
+        .about-section h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #124968;
+            border-bottom: 2px solid #124968;
+            padding-bottom: 10px;
+        }
 
-		.medium-posts ul {
-			list-style-type: none;
-			padding: 0;
-		}
+        .medium-posts {
+            margin: 20px 0;
+        }
 
-		.medium-posts li {
-			margin: 10px 0;
-		}
+        .medium-posts .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
 
-		.medium-posts a {
-			color: #124968;
-			text-decoration: none;
-		}
+        .medium-posts .card-content {
+            padding: 30px;
+        }
 
-		.medium-posts a:hover {
-			text-decoration: underline;
-		}
-	</style>
+        .medium-posts h4 {
+            color: #124968;
+            border-bottom: 2px solid #124968;
+            padding-bottom: 10px;
+        }
+
+        .medium-posts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .medium-posts li {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .medium-posts li:hover {
+            background-color: #f8f9fa;
+        }
+
+        .medium-posts a {
+            color: #124968;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+        }
+
+        .medium-posts a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .links-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .about-section, .links-section {
+                padding: 20px;
+            }
+        }
+    </style>
 	<title>Saman Esmaeil</title>
 </head>
 
@@ -126,23 +173,25 @@
 		<div class="row">
 			<div class="col s12 m6">
 				<div class="links-section">
-					<h4>Hello, I'm Saman! 👋</h4>
-					<a href="http://t.me/samanesmaeil"><i class="material-icons">send</i>Telegram</a>
-					<a href="https://medium.com/@teal33t"><i class="material-icons">article</i>Medium</a>
-					<a href="https://www.linkedin.com/in/samanism/"><i class="material-icons">person</i>LinkedIn</a>
-					<a href="https://askubuntu.com/users/40751/teal33t"><i class="material-icons">help_outline</i>AskUbuntu</a>
-					<a href="https://feazad.academia.edu/SamanIsmael"><i class="material-icons">school</i>Academia</a>
-					<a href="https://www.last.fm/user/samilsoft"><i class="material-icons">music_note</i>Last.fm</a>
-					<a href="https://500px.com/teal33t"><i class="material-icons">camera_alt</i>500px</a>
-				</div>
+                    <div class="links-grid">
+                        <a href="http://t.me/samanesmaeil"><i class="material-icons">send</i>Telegram</a>
+                        <a href="https://medium.com/@teal33t"><i class="material-icons">article</i>Medium</a>
+                        <a href="https://www.linkedin.com/in/samanism/"><i class="material-icons">person</i>LinkedIn</a>
+                        <a href="https://github.com/teal33t"><i class="material-icons">code</i>GitHub</a>
+                        <a href="https://askubuntu.com/users/40751/teal33t"><i class="material-icons">help_outline</i>AskUbuntu</a>
+                        <a href="https://feazad.academia.edu/SamanIsmael"><i class="material-icons">school</i>Academia</a>
+                        <a href="https://www.last.fm/user/samilsoft"><i class="material-icons">music_note</i>Last.fm</a>
+                        <a href="https://500px.com/teal33t"><i class="material-icons">camera_alt</i>500px</a>
+                    </div>				</div>
 			</div>
 			<div class="col s12 m6">
 				<div class="about-section">
 					<h4>About Me</h4>
 					<p>
-						Creating real software is not just about writing code or dealing with zeros and ones; it's about creating something 'soft.' It's a blend of art and logic, shaping ideas into functional reality.
-						<br><br>
-						I write mostly about web development, automation tips, and open-source projects.
+						As a web developer freelancer, I specialize in writing about web development, automation workflows, and open-source projects.
+					</p>
+					<p>
+						My technology stack includes Symfony and Flask for backend development, Vue.js and Material for frontend design, Docker and Swarm for containerization and orchestration, and PostgreSQL and MongoDB for database management.
 					</p>
 				</div>
 			</div>
