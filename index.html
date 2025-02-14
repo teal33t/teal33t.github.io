@@ -1,223 +1,224 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="keywords"
-		content="Saman Esmaeil, software developer, scrum master, Python, PHP, web application, zamann pharma support, Horastro, Jyotish, Vedic philosophy, astrology, ayurveda, free software culture, open source, Native American flute, photography, Rumi">
-	<meta name="robots" content="index,follow">
-	<link rel="icon" type="image/ico" href="favicon.ico">
+	<!-- Meta Tags for SEO -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
-		content="Get to know Saman Esmaeil, a software developer and scrum master who loves coding in Python and PHP. Saman is also a co-founder of Horastro and is passionate about helping people through Vedic philosophy and astrology. Find out more about Saman and his projects.">
+		content="Experienced Freelance Web Developer specializing in backend and frontend development. Let's build something great together. Contact me for your next project.">
+	<meta name="keywords"
+		content="freelance web developer, web development, flask, symfony, vue.js, docker, postgresql, mongodb, automation, backend development, frontend development">
+	<meta name="author" content="Saman Esmaeil">
+	<!-- Structured Data (JSON-LD) for SEO -->
+	<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saman Esmaeil",
+        "jobTitle": "Web Developer",
+        "url": "https://yourwebsite.com",
+        "sameAs": [
+            "https://github.com/teal33t",
+            "https://linkedin.com/in/samanism",
+            "https://medium.com/@teal33t"
+        ]
+    }
+    </script>
+	<!-- Stylesheets -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Titillium+Web&display=swap" rel="stylesheet">
-	<style>
-       * {
-            font-family: 'Babylonica', cursive;
-            font-family: 'Titillium Web', sans-serif;
-        }
 
-        .primary-color {
-            background-color: #124968 !important;
-        }
-
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .avatar:hover {
-            transform: scale(1.05);
-        }
-
-        .links-section {
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin: 20px 0;
-        }
-
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .links-section a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            background: #f8f9fa;
-            text-align: center;
-            height: 100px;
-        }
-
-        .links-section a:hover {
-            background: #124968;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .links-section a i {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .links-section a:hover i {
-            color: white;
-        }
-
-        .about-section {
-            font-size: 16px;
-            line-height: 1.8;
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin: 20px 0;
-        }
-
-        .about-section h4 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #124968;
-            border-bottom: 2px solid #124968;
-            padding-bottom: 10px;
-        }
-
-        .medium-posts {
-            margin: 20px 0;
-        }
-
-        .medium-posts .card {
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .medium-posts .card-content {
-            padding: 30px;
-        }
-
-        .medium-posts h4 {
-            color: #124968;
-            border-bottom: 2px solid #124968;
-            padding-bottom: 10px;
-        }
-
-        .medium-posts ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .medium-posts li {
-            margin: 15px 0;
-            padding: 10px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .medium-posts li:hover {
-            background-color: #f8f9fa;
-        }
-
-        .medium-posts a {
-            color: #124968;
-            text-decoration: none;
-            display: block;
-            font-size: 16px;
-        }
-
-        .medium-posts a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .links-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .about-section, .links-section {
-                padding: 20px;
-            }
-        }
-    </style>
-	<title>Saman Esmaeil</title>
+	<link rel="stylesheet" href="styles.css">
+	<title>Saman Esmaeil - Freelance Web Developer for Hire</title>
 </head>
 
 <body>
-	<nav class="primary-color">
-		<div class="nav-wrapper">
-		</div>
-	</nav>
-	<div class="container">
-		<div class="section center">
-			<img src="avatar.jpg" alt="Saman Esmaeil" class="avatar">
-			<h3>Saman Esmaeil</h3>
-			<!-- <h5>Software Engineer</h5> -->
-		</div>
-		<div class="row">
-			<div class="col s12 m6">
-				<div class="links-section">
-                    <div class="links-grid">
-                        <a href="http://t.me/samanesmaeil"><i class="material-icons">send</i>Telegram</a>
-                        <a href="https://medium.com/@teal33t"><i class="material-icons">article</i>Medium</a>
-                        <a href="https://www.linkedin.com/in/samanism/"><i class="material-icons">person</i>LinkedIn</a>
-                        <a href="https://github.com/teal33t"><i class="material-icons">code</i>GitHub</a>
-                        <a href="https://askubuntu.com/users/40751/teal33t"><i class="material-icons">help_outline</i>AskUbuntu</a>
-                        <a href="https://feazad.academia.edu/SamanIsmael"><i class="material-icons">school</i>Academia</a>
-                        <a href="https://www.last.fm/user/samilsoft"><i class="material-icons">music_note</i>Last.fm</a>
-                        <a href="https://500px.com/teal33t"><i class="material-icons">camera_alt</i>500px</a>
-                    </div>				</div>
+	<div class="container-fluid p-0">
+		<nav class="navbar navbar-expand-lg bg-primary">
+			<div class="container">
 			</div>
-			<div class="col s12 m6">
-				<div class="about-section">
-					<h4>About Me</h4>
-					<p>
-						As a web developer freelancer, I specialize in writing about web development, automation workflows, and open-source projects.
-					</p>
-					<p>
-						My technology stack includes Symfony and Flask for backend development, Vue.js and Material for frontend design, Docker and Swarm for containerization and orchestration, and PostgreSQL and MongoDB for database management.
-					</p>
+		</nav>
+
+		<div class="container py-5">
+			<div class="text-center mb-5">
+				<img src="avatar.jpg" alt="Saman Esmaeil" class="avatar rounded-circle mb-4">
+				<h2 class="mb-2">Saman Esmaeil</h2>
+				<h5 class="text-muted">Freelance Web Developer</h5>
+			</div>
+
+			<div class="row g-4 mb-5">
+				<div class="col-12 col-lg-5">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<div class="links-grid">
+								<a href="#" onclick="openTelegram(event)" class="social-link"><i
+										class="bi bi-telegram"></i>Telegram</a>
+								<a target="_blank" href="https://medium.com/@teal33t" class="social-link"><i
+										class="bi bi-medium"></i>Medium</a>
+								<a target="_blank" href="https://www.linkedin.com/in/samanism/" class="social-link"><i
+										class="bi bi-linkedin"></i>LinkedIn</a>
+								<a target="_blank" href="https://github.com/teal33t" class="social-link"><i
+										class="bi bi-github"></i>GitHub</a>
+								<a target="_blank" href="https://askubuntu.com/users/40751/teal33t"
+									class="social-link"><i class="bi bi-question-circle"></i>AskUbuntu</a>
+								<a target="_blank" href="https://feazad.academia.edu/SamanIsmael" class="social-link"><i
+										class="bi bi-book"></i>Academia</a>
+								<a target="_blank" href="https://www.last.fm/user/samilsoft" class="social-link"><i
+										class="bi bi-music-note"></i>Last.fm</a>
+								<a target="_blank" href="https://500px.com/teal33t" class="social-link"><i
+										class="bi bi-camera"></i>500px</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-7">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h3 class="card-title border-bottom border-primary pb-3 mb-4">About Me</h3>
+							<p class="lead bold mb-4 fw-light">Creating real software is not just about writing code or
+								dealing with zeros and ones; it's about creating something 'soft.' It's a blend of art
+								and logic, shaping ideas into functional reality.</p>
+							<p class="lead mb-4">
+								I write mostly about web development, automation tips, and open-source projects.
+								I specialize in backend and frontend development, as well as
+								automation workflows, helping businesses streamline their operations and improve
+								performance.
+							</p>
+							<p class="lead mb-4">
+								I am passionate about transforming ideas into reality and delivering projects that
+								exceed client expectations. With a systematic approach to freelancing, I offer:
+								<ul class="list-unstyled mt-3 lead">
+									<li><i class="bi bi-check2-circle text-primary me-2"></i>Thorough initial consultation and requirement analysis</li>
+									<li><i class="bi bi-check2-circle text-primary me-2"></i>Detailed project planning and milestone setting</li>
+									<li><i class="bi bi-check2-circle text-primary me-2"></i>Regular progress updates and client communication</li>
+									<li><i class="bi bi-check2-circle text-primary me-2"></i>Quality assurance and thorough testing</li>
+									<li><i class="bi bi-check2-circle text-primary me-2"></i>Post-deployment support and maintenance</li>
+								</ul>
+							</p>
+							<p class="lead">
+								From crafting custom websites and robust web applications to developing scalable API services,
+								I deliver comprehensive solutions tailored to your needs. Whether starting from scratch or
+								enhancing existing systems, my structured approach and technical expertise ensure successful
+								outcomes that drive your business forward.
+
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row medium-posts">
-			<div class="col s12">
-				<div class="card">
-					<div class="card-content">
-						<h4>Latest Medium Posts</h4>
-						<ul id="medium-posts-list">
-							<!-- Medium posts will be dynamically loaded here -->
-						</ul>
+
+			<div class="row g-4">
+				<div class="col-12 col-lg-6">
+					<div class="card shadow-sm h-100">
+						<div class="card-body">
+							<h3 class="card-title border-bottom border-primary pb-3 mb-4">Latest Medium Posts</h3>
+							<ul id="medium-posts-list" class="list-unstyled lead" style="direction: ltr;"></ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-6">
+					<div class="card shadow-sm h-100">
+						<div class="card-body">
+							<h3 class="card-title border-bottom border-primary pb-3 mb-4">Latest Portfolio</h3>
+							<div class="portfolio-grid">
+								<a href="https://pharmatching.com" target="_blank" class="portfolio-item">
+									<div class="card shadow-sm h-100 overflow-hidden">
+										<img src="pharmatching_com.png" alt="Pharmatching.com Preview"
+											class="project-image">
+										<div class="card-body">
+											<h5 class="mb-2">Pharmatching.com</h5>
+											<p class="mb-0">Redesigned and developed a matchmaking B2B platform using
+												PWA and REST API.</p>
+										</div>
+									</div>
+								</a>
+								<a href="https://matn.ai" target="_blank" class="portfolio-item">
+									<div class="card shadow-sm h-100 overflow-hidden">
+										<img src="matn_ai.png" alt="Matn.ai Preview" class="project-image">
+										<div class="card-body">
+											<h5 class="mb-2">Matn.ai</h5>
+											<p class="mb-0">Co-founded and developed a web application and an
+												integration plugin for Matn chatbot interface, enabling users to access
+												all LLM models.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<div class="container p-4 mb-5">
+		<div class="skills-section">
+			<div class="skills-grid">
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/symfony.svg" alt="Symfony"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/flask.svg" alt="Flask"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/postgresql.svg" alt="PostgreSQL"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vuedotjs.svg" alt="Vue.js"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tailwindcss.svg" alt="Tailwind CSS"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bootstrap.svg" alt="Bootstrap"
+						class="skill-icon">
+				</div>
+				<div class="skill-item">
+					<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mongodb.svg" alt="MongoDB"
+						class="skill-icon">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container p-4 mb-5 text-center">
+		<a href="http://teal33t.github.io/">@teal33t</a>
+	</div>
+
 	<script>
+
+
+
+
+		function openTelegram(e) {
+			e.preventDefault();
+			const username = atob('c2FtYW5lc21hZWls'); // Base64 encoded username
+			window.location.href = `https://t.me/${username}`;
+		}
+
 		// Fetch Medium posts
 		const mediumFeedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@teal33t";
 
 		fetch(mediumFeedUrl)
 			.then(response => response.json())
 			.then(data => {
-				const posts = data.items.slice(0, 10); // Get the last 10 posts
+				const posts = data.items.slice(0, 8); // Get the last 10 posts
 				const postsList = document.getElementById('medium-posts-list');
 
 				posts.forEach(post => {
@@ -225,12 +226,12 @@
 					const link = document.createElement('a');
 					link.href = post.link;
 					link.textContent = post.title;
+					listItem.style = "padding: 10px;"
 					listItem.appendChild(link);
 					postsList.appendChild(listItem);
 				});
 			})
 			.catch(error => console.error('Error fetching Medium posts:', error));
 	</script>
-</body>
 
 </html>
