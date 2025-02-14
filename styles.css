@@ -43,17 +43,18 @@
 
 .links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-md);
     padding: var(--spacing-md);
 }
 
 .social-link {
-    height: 120px;
+    height: 100px;
     transition: all var(--transition-speed) ease;
-    padding: var(--spacing-md);
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    line-height: 40px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -158,7 +159,7 @@
     }
 
     .links-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .skills-grid {
