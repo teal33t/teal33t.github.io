@@ -88,14 +88,17 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     gap: var(--spacing-md);
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
+    justify-items: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .skill-item {
     text-align: center;
-    padding: var(--spacing-sm);
     transition: transform var(--transition-speed) ease;
 }
 
