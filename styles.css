@@ -43,31 +43,35 @@
 
 .links-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
 }
 
 .social-link {
-    height: 100px;
+    height: 40px;
+    width: 40px;
     transition: all var(--transition-speed) ease;
-    padding: 10px;
+    padding: 8px;
     display: flex;
-    flex-direction: column;
-    line-height: 40px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: var(--text-color);
-    border-radius: calc(var(--border-radius) * 0.75);
+    border-radius: calc(var(--border-radius) * 0.5);
     background-color: var(--secondary-color);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 .social-link:hover {
     background: var(--primary-color) !important;
     color: white;
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .social-link i {
@@ -162,9 +166,9 @@
     }
 
     .links-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
-
+    
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
     }
