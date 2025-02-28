@@ -93,6 +93,10 @@
     margin-bottom: var(--spacing-sm);
 }
 
+.medium-head a{
+    text-decoration: none;
+}
+
 .card {
     border: none;
     border-radius: var(--border-radius);
