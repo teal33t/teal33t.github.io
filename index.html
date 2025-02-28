@@ -131,7 +131,7 @@
 				<div class="col-12">
 					<div class="card shadow-sm h-100">
 						<div class="card-body">
-							<h3 class="card-title border-bottom border-primary pb-3 mb-4">Latest Medium Posts</h3>
+							<h3 class="card-title border-bottom border-primary pb-3 mb-4"><a href="https://medium.com/@teal33t" target="_blank">Latest Medium Posts</a></h3>
 							<ul id="medium-posts-list" class="list-unstyled lead" style="direction: ltr;"></ul>
 						</div>
 					</div>
@@ -154,7 +154,7 @@
 		fetch(mediumFeedUrl)
 			.then(response => response.json())
 			.then(data => {
-				const posts = data.items.slice(0, 20); // Get the last 10 posts
+				const posts = data.items.slice(0, 5); // Get the last 10 posts
 				const postsList = document.getElementById('medium-posts-list');
 
 				posts.forEach(post => {
