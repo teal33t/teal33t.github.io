@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blog by Saman Esmaeil - Web Developer sharing thoughts on web development, automation, and more.">
+    <meta name="keywords"
+        content="blog, web development, software development, coding, programming, tech articles">
+    <meta name="author" content="Saman Esmaeil">
+    
+    <!-- Stylesheets -->
+    <link href="../bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <title>Saman Esmaeil - Blog</title>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container">
+                <a class="navbar-brand text-white" href="../index.html">Saman Esmaeil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="index.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title border-bottom border-primary pb-3 mb-4">My Blog</h2>
+                            <p class="lead mb-5">Welcome to my blog where I share thoughts, tutorials, and insights about web development, 
+                            automation, and software engineering. Feel free to explore the articles below.</p>
+                            
+                            <div class="blog-list">
+                                <!-- Blog post entries -->
+                                <article class="blog-entry">
+                                    <h3 class="blog-title"><a href="posts/first-post.html">Getting Started with GitHub Pages</a></h3>
+                                    <div class="blog-meta">
+                                        <span class="blog-date">June 15, 2023</span>
+                                        <span class="blog-categories">GitHub, Web Development</span>
+                                    </div>
+                                    <p class="blog-excerpt">
+                                        In this post, I'll walk you through setting up your own personal website using GitHub Pages.
+                                        We'll cover everything from creating the repository to customizing your site with HTML and CSS.
+                                    </p>
+                                    <a href="posts/first-post.html" class="read-more">Read More →</a>
+                                </article>
+                                
+                                <article class="blog-entry">
+                                    <h3 class="blog-title"><a href="posts/second-post.html">Automating Your Workflow with Bash Scripts</a></h3>
+                                    <div class="blog-meta">
+                                        <span class="blog-date">July 5, 2023</span>
+                                        <span class="blog-categories">Automation, Bash, Productivity</span>
+                                    </div>
+                                    <p class="blog-excerpt">
+                                        Learn how to create useful bash scripts to automate repetitive tasks in your development workflow.
+                                        I'll share some of my favorite time-saving scripts and explain how they work.
+                                    </p>
+                                    <a href="posts/second-post.html" class="read-more">Read More →</a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> 

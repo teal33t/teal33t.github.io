@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta Tags for SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn how to automate repetitive tasks in your development workflow using Bash scripts">
+    <meta name="keywords"
+        content="bash scripting, automation, linux, productivity, development workflow">
+    <meta name="author" content="Saman Esmaeil">
+    
+    <!-- Stylesheets -->
+    <link href="../../bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../blog.css">
+    <title>Automating Your Workflow with Bash Scripts | Saman Esmaeil's Blog</title>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container">
+                <a class="navbar-brand text-white" href="../../index.html">Saman Esmaeil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white active" href="../index.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <header class="blog-header">
+                                <h1 class="mb-2">Automating Your Workflow with Bash Scripts</h1>
+                                <div class="blog-meta">
+                                    <span class="blog-date">July 5, 2023</span>
+                                    <span class="blog-categories">Automation, Bash, Productivity</span>
+                                </div>
+                            </header>
+                            
+                            <div class="blog-content">
+                                <p>
+                                    As developers, we often find ourselves repeating the same tasks over and over again. Whether it's setting up a new project, 
+                                    running tests, or deploying code, these repetitive tasks can consume a significant amount of our time. In this post, 
+                                    I'll share some practical Bash scripts that you can use to automate common development tasks and boost your productivity.
+                                </p>
+
+                                <h2>Why Use Bash Scripts?</h2>
+                                <p>
+                                    Bash (Bourne Again SHell) is the default shell on most Linux distributions and macOS. It's a powerful scripting language 
+                                    that allows you to automate tasks by running commands in sequence. Here are some reasons why Bash scripts are a great choice 
+                                    for automation:
+                                </p>
+                                <ul>
+                                    <li>They're built into your system (no need to install additional software)</li>
+                                    <li>They can interact with the filesystem, network, and other programs</li>
+                                    <li>They're relatively easy to write and understand</li>
+                                    <li>They can be easily shared with others</li>
+                                </ul>
+
+                                <h2>Script 1: Project Scaffolding</h2>
+                                <p>
+                                    One of the most repetitive tasks in development is setting up a new project. The following script creates a basic 
+                                    project structure for a Node.js application, including directories for source code, tests, and documentation.
+                                </p>
+                                <pre><code>#!/bin/bash
+
+# create_node_project.sh
+# Creates a basic structure for a Node.js project
+
+if [ -z "$1" ]; then
+    echo "Usage: ./create_node_project.sh project_name"
+    exit 1
+fi
+
+PROJECT_NAME=$1
+
+# Create project directory
+mkdir -p $PROJECT_NAME/{src,tests,docs}
+
+# Initialize git repository
+cd $PROJECT_NAME
+git init
+
+# Create basic files
+touch README.md
+touch .gitignore
+touch src/index.js
+touch tests/index.test.js
+
+# Add basic content to README.md
+echo "# $PROJECT_NAME" > README.md
+echo "" >> README.md
+echo "A description of your project." >> README.md
+
+# Add node_modules to .gitignore
+echo "node_modules/" > .gitignore
+echo "*.log" >> .gitignore
+
+# Initialize npm
+npm init -y
+
+# Install basic dependencies
+npm install --save-dev jest
+
+echo "Project $PROJECT_NAME created successfully!"
+</code></pre>
+
+                                <p>
+                                    To use this script, save it as <code>create_node_project.sh</code>, make it executable with <code>chmod +x create_node_project.sh</code>, 
+                                    and then run it with <code>./create_node_project.sh my_project</code>.
+                                </p>
+
+                                <h2>Script 2: Git Workflow Automation</h2>
+                                <p>
+                                    If you're working with Git, you probably perform the same sequence of commands multiple times a day. The following script 
+                                    automates the process of updating your feature branch with the latest changes from the main branch.
+                                </p>
+                                <pre><code>#!/bin/bash
+
+# git_update.sh
+# Updates the current branch with changes from the main branch
+
+# Get the current branch name
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# Define the main branch (change to 'master' if needed)
+MAIN_BRANCH="main"
+
+# Check if the current branch is the main branch
+if [ "$CURRENT_BRANCH" = "$MAIN_BRANCH" ]; then
+    echo "You are already on the $MAIN_BRANCH branch."
+    exit 0
+fi
+
+# Stash any uncommitted changes
+git stash
+
+# Checkout the main branch and pull latest changes
+git checkout $MAIN_BRANCH
+git pull
+
+# Checkout back to the feature branch
+git checkout $CURRENT_BRANCH
+
+# Merge the main branch into the feature branch
+git merge $MAIN_BRANCH
+
+# Apply the stashed changes if there are any
+git stash pop
+
+echo "Successfully updated $CURRENT_BRANCH with the latest changes from $MAIN_BRANCH."
+</code></pre>
+
+                                <h2>Script 3: Database Backup</h2>
+                                <p>
+                                    Regular database backups are essential for any project. The following script creates a backup of a PostgreSQL database 
+                                    and compresses it into a timestamped file.
+                                </p>
+                                <pre><code>#!/bin/bash
+
+# backup_postgres.sh
+# Creates a backup of a PostgreSQL database
+
+# Database credentials
+DB_USER="your_db_user"
+DB_NAME="your_db_name"
+
+# Backup directory
+BACKUP_DIR="$HOME/backups"
+
+# Create backup directory if it doesn't exist
+mkdir -p $BACKUP_DIR
+
+# Generate timestamp
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
+# Backup filename
+BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_${TIMESTAMP}.sql.gz"
+
+# Create the backup
+echo "Creating backup of $DB_NAME..."
+pg_dump -U $DB_USER $DB_NAME | gzip > $BACKUP_FILE
+
+# Check if the backup was successful
+if [ $? -eq 0 ]; then
+    echo "Backup created successfully: $BACKUP_FILE"
+else
+    echo "Backup failed!"
+    exit 1
+fi
+
+# Delete backups older than 7 days
+find $BACKUP_DIR -name "${DB_NAME}_*.sql.gz" -mtime +7 -delete
+
+echo "Deleted old backups (older than 7 days)."
+</code></pre>
+
+                                <p>
+                                    Remember to adjust the database credentials in this script before using it.
+                                </p>
+
+                                <h2>Script 4: Deployment Script</h2>
+                                <p>
+                                    Deploying code can involve multiple steps. The following script automates a basic deployment process for a web application.
+                                </p>
+                                <pre><code>#!/bin/bash
+
+# deploy.sh
+# Deploys a web application to a server
+
+# Configuration
+SERVER_USER="your_server_user"
+SERVER_HOST="your_server_host"
+SERVER_PATH="/var/www/your_app"
+REPO_URL="https://github.com/your_username/your_repo.git"
+BRANCH="main"
+
+# Local build directory
+BUILD_DIR="./build"
+
+echo "Starting deployment process..."
+
+# Ensure we're on the right branch
+git checkout $BRANCH
+
+# Pull latest changes
+git pull origin $BRANCH
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# If tests fail, exit
+if [ $? -ne 0 ]; then
+    echo "Tests failed. Deployment aborted."
+    exit 1
+fi
+
+# Build the application
+npm run build
+
+# Deploy to the server
+echo "Deploying to server..."
+rsync -avz --delete $BUILD_DIR/ $SERVER_USER@$SERVER_HOST:$SERVER_PATH
+
+# Restart the application on the server
+ssh $SERVER_USER@$SERVER_HOST "cd $SERVER_PATH && pm2 restart app"
+
+echo "Deployment completed successfully!"
+</code></pre>
+
+                                <h2>Making Scripts Accessible from Anywhere</h2>
+                                <p>
+                                    To make your scripts accessible from anywhere in your system, you can add them to a directory that's in your PATH. 
+                                    Here's how:
+                                </p>
+                                <ol>
+                                    <li>Create a bin directory in your home folder: <code>mkdir -p ~/bin</code></li>
+                                    <li>Copy your scripts to this directory</li>
+                                    <li>Make them executable: <code>chmod +x ~/bin/*.sh</code></li>
+                                    <li>Add the bin directory to your PATH by adding the following line to your <code>~/.bashrc</code> or <code>~/.zshrc</code> file:
+                                        <code>export PATH="$HOME/bin:$PATH"</code></li>
+                                    <li>Reload your shell configuration: <code>source ~/.bashrc</code> or <code>source ~/.zshrc</code></li>
+                                </ol>
+                                <p>
+                                    Now you can run your scripts from anywhere without specifying the full path.
+                                </p>
+
+                                <h2>Conclusion</h2>
+                                <p>
+                                    Bash scripts are a powerful tool for automating repetitive tasks in your development workflow. By investing a little time 
+                                    in creating these scripts, you can save countless hours in the long run and reduce the risk of human error.
+                                </p>
+                                <p>
+                                    The scripts presented in this post are just starting points. Feel free to modify them to suit your specific needs or 
+                                    use them as inspiration to create your own automation scripts.
+                                </p>
+                                <p>
+                                    What are your favorite automation scripts? Let me know in the comments below!
+                                </p>
+                            </div>
+
+                            <div class="blog-author">
+                                <img class="blog-author-img" src="../../avatar.jpg" alt="Saman Esmaeil">
+                                <div class="blog-author-info">
+                                    <div class="blog-author-name">Saman Esmaeil</div>
+                                    <div class="blog-author-bio">Software Developer specializing in web development and automation solutions.</div>
+                                </div>
+                            </div>
+
+                            <a href="../index.html" class="back-to-blog">Back to Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> 
