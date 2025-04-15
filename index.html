@@ -1,193 +1,774 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<!-- Meta Tags for SEO -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description"
-		content="Experienced Freelance Web Developer specializing in backend and frontend development. Let's build something great together. Contact me for your next project.">
-	<meta name="keywords"
-		content="freelance web developer, web development, flask, symfony, vue.js, docker, postgresql, mongodb, automation, backend development, frontend development">
-	<meta name="author" content="Saman Esmaeil">
-	<!-- Structured Data (JSON-LD) for SEO -->
-	<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Saman Esmaeil",
-        "jobTitle": "Web Developer",
-        "url": "https://teal33t.github.io",
-        "sameAs": [
-            "https://github.com/teal33t",
-            "https://linkedin.com/in/samanism",
-            "https://medium.com/@teal33t"
-        ]
-    }
-    </script>
-	<!-- Stylesheets -->
-	<link href="./bootstrap.min.css" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAl33T - Saman Esmaeil</title>
+    <meta name="description"
+        content="TEAl33T - Digital Alchemist Saman Esmaeil's personal site featuring hacking projects, tutorials, and blog. Explore code sorcery, system wizardry, and more.">
+    <meta name="keywords"
+        content="TEAl33T, Saman Esmaeil, hacking, cybersecurity, programming, tutorials, blog, digital alchemist, code sorcery, system wizardry, data necromancy">
+    <meta name="author" content="Saman Esmaeil">
+    <meta property="og:title" content="TEAl33T - Saman Esmaeil">
+    <meta property="og:description"
+        content="Digital Alchemist Saman Esmaeil's personal site featuring hacking projects, tutorials, and blog.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/images/teal33t-og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TEAl33T - Saman Esmaeil">
+    <meta name="twitter:description"
+        content="Digital Alchemist Saman Esmaeil's personal site featuring hacking projects, tutorials, and blog.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/teal33t-twitter-image.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Vazirmatn:wght@100..900&display=swap');
+    </style>
 
-	<link rel="stylesheet" href="./styles.css">
-	<title>Saman Esmaeil - Software Developer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=VT323&display=swap');
+
+        :root {
+            --primary: #00ff00;
+            --secondary: #0000ff;
+            --bg: #000000;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .hacker-font {
+            font-family: 'VT323', monospace;
+        }
+
+        .hacker-font-fa {
+            font-family: 'Vazirmatn', monospace;
+        }
+
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--secondary);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 var(--primary);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim-2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(31px, 9999px, 94px, 0);
+            }
+
+            10% {
+                clip: rect(112px, 9999px, 76px, 0);
+            }
+
+            20% {
+                clip: rect(85px, 9999px, 77px, 0);
+            }
+
+            30% {
+                clip: rect(27px, 9999px, 97px, 0);
+            }
+
+            40% {
+                clip: rect(64px, 9999px, 98px, 0);
+            }
+
+            50% {
+                clip: rect(61px, 9999px, 85px, 0);
+            }
+
+            60% {
+                clip: rect(99px, 9999px, 114px, 0);
+            }
+
+            70% {
+                clip: rect(34px, 9999px, 115px, 0);
+            }
+
+            80% {
+                clip: rect(98px, 9999px, 129px, 0);
+            }
+
+            90% {
+                clip: rect(43px, 9999px, 96px, 0);
+            }
+
+            100% {
+                clip: rect(82px, 9999px, 64px, 0);
+            }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% {
+                clip: rect(65px, 9999px, 119px, 0);
+            }
+
+            10% {
+                clip: rect(66px, 9999px, 101px, 0);
+            }
+
+            20% {
+                clip: rect(47px, 9999px, 113px, 0);
+            }
+
+            30% {
+                clip: rect(107px, 9999px, 114px, 0);
+            }
+
+            40% {
+                clip: rect(33px, 9999px, 132px, 0);
+            }
+
+            50% {
+                clip: rect(147px, 9999px, 118px, 0);
+            }
+
+            60% {
+                clip: rect(105px, 9999px, 98px, 0);
+            }
+
+            70% {
+                clip: rect(129px, 9999px, 126px, 0);
+            }
+
+            80% {
+                clip: rect(34px, 9999px, 115px, 0);
+            }
+
+            90% {
+                clip: rect(102px, 9999px, 80px, 0);
+            }
+
+            100% {
+                clip: rect(63px, 9999px, 61px, 0);
+            }
+        }
+
+        .scanlines {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+
+        .scanlines::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(0, 255, 0, 0.05) 50%,
+                    transparent 100%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .terminal {
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            box-shadow: 0 0 10px var(--primary);
+            position: relative;
+        }
+
+        .terminal-header {
+            background-color: #111;
+            padding: 5px 10px;
+            border-bottom: 1px solid var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .terminal-body {
+            padding: 15px;
+            min-height: 200px;
+        }
+
+        .command-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .prompt {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 15px;
+            background-color: var(--primary);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .hacker-btn {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hacker-btn:hover {
+            box-shadow: 0 0 10px var(--primary);
+            text-shadow: 0 0 5px var(--primary);
+        }
+
+        .hacker-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .hacker-btn:hover::before {
+            left: 100%;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #111;
+            border: 1px solid var(--primary);
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            position: relative;
+        }
+    </style>
 </head>
 
-<body>
-	<div class="container-fluid p-0">
-		<nav class="navbar navbar-expand-lg bg-primary">
-			<div class="container">
-				<a class="navbar-brand text-white" href="index.html">Saman Esmaeil</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a class="nav-link text-white active" href="index.html">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="blog/index.html">Blog</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+<body class="scanlines">
+    <canvas id="matrix" class="matrix-bg"></canvas>
 
-		<div class="container py-5">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="mb-12">
+            <div class="flex justify-between items-center">
+                <div class="glitch" data-text="teal33t">
+                    <h1 class="text-5xl md:text-6xl font-bold hacker-font text-green-500">teal33t</h1>
+                    <h3 class="hacker-font text-center">SAMAN ESMAEIL</h3>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hacker-btn" onclick="showTab('home')">Home</a>
+                    <a href="#" class="hacker-btn" onclick="showTab('cv')">CV</a>
+                    <a href="https://t.me/samanesmaeil" class="hacker-btn"
+                        style="background-color: #00ff00; color: black; border-color: #00ff00;">Hire Me</a>
+                </div>
+            </div>
+            <div class="mt-4 border-b border-green-500"></div>
+        </header>
 
-			<div class="row g-4 mb-5">
-				<div class="col-12 col-lg-5">
-					<div class="card shadow-sm">
-						<div class="card-body">
-							<div class="text-center mb-5">
-								<img src="avatar.jpg" alt="Saman Esmaeil" class="avatar rounded-circle mb-4">
-								<h2 class="mb-4">Saman Esmaeil</h2>
-								<h5 class="text-muted">Software Developer</h5>
-							</div>
+        <!-- Main Content -->
+        <main>
+            <!-- Home Tab -->
+            <div id="home" class="tab-content active">
+                <div class="terminal mb-8">
+                    <div class="terminal-header">
+                        <div class="terminal-button bg-red-500"></div>
+                        <div class="terminal-button bg-yellow-500"></div>
+                        <div class="terminal-button bg-green-500"></div>
+                        <div class="ml-2 text-sm">user@teal33t:~</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span>whoami</span>
+                        </div>
+                        <div class="mb-4">
+                            <p>Username: teal33t</p>
+                            <p>Title: Digital Alchemist</p>
+                            <p>Specialties: Code Sorcery, System Wizardry, Data Necromancy</p>
+                        </div>
 
-							<div class="links-grid">
-								<a target="_blank" href="https://medium.com/@teal33t" class="social-link">
-									<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<title>Medium</title>
-										<path
-											d="M4.21 0A4.201 4.201 0 0 0 0 4.21v15.58A4.201 4.201 0 0 0 4.21 24h15.58A4.201 4.201 0 0 0 24 19.79v-1.093c-.137.013-.278.02-.422.02-2.577 0-4.027-2.146-4.09-4.832a7.592 7.592 0 0 1 .022-.708c.093-1.186.475-2.241 1.105-3.022a3.885 3.885 0 0 1 1.395-1.1c.468-.237 1.127-.367 1.664-.367h.023c.101 0 .202.004.303.01V4.211A4.201 4.201 0 0 0 19.79 0Zm.198 5.583h4.165l3.588 8.435 3.59-8.435h3.864v.146l-.019.004c-.705.16-1.063.397-1.063 1.254h-.003l.003 10.274c.06.676.424.885 1.063 1.03l.02.004v.145h-4.923v-.145l.019-.005c.639-.144.994-.353 1.054-1.03V7.267l-4.745 11.15h-.261L6.15 7.569v9.445c0 .857.358 1.094 1.063 1.253l.02.004v.147H4.405v-.147l.019-.004c.705-.16 1.065-.397 1.065-1.253V6.987c0-.857-.358-1.094-1.064-1.254l-.018-.004zm19.25 3.668c-1.086.023-1.733 1.323-1.813 3.124H24V9.298a1.378 1.378 0 0 0-.342-.047Zm-1.862 3.632c-.1 1.756.86 3.239 2.204 3.634v-3.634z" />
-									</svg>
-								</a>
-								<a target="_blank" href="https://www.linkedin.com/in/samanism/" class="social-link">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-										<path
-											d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-									</svg>
-								</a>
-								<a target="_blank" href="https://github.com/teal33t" class="social-link">
-									<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<title>GitHub</title>
-										<path
-											d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-									</svg>
-								</a>
-								<a target="_blank" href="https://askubuntu.com/users/40751/teal33t" class="social-link">
-									<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<title>Ubuntu</title>
-										<path
-											d="M17.61.455a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zM12.92.8C8.923.777 5.137 2.941 3.148 6.451a4.5 4.5 0 0 1 .26-.007 4.92 4.92 0 0 1 2.585.737A8.316 8.316 0 0 1 12.688 3.6 4.944 4.944 0 0 1 13.723.834 11.008 11.008 0 0 0 12.92.8zm9.226 4.994a4.915 4.915 0 0 1-1.918 2.246 8.36 8.36 0 0 1-.273 8.303 4.89 4.89 0 0 1 1.632 2.54 11.156 11.156 0 0 0 .559-13.089zM3.41 7.932A3.41 3.41 0 0 0 0 11.342a3.41 3.41 0 0 0 3.41 3.409 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41zm2.027 7.866a4.908 4.908 0 0 1-2.915.358 11.1 11.1 0 0 0 7.991 6.698 11.234 11.234 0 0 0 2.422.249 4.879 4.879 0 0 1-.999-2.85 8.484 8.484 0 0 1-.836-.136 8.304 8.304 0 0 1-5.663-4.32zm11.405.928a3.41 3.41 0 0 0-3.41 3.41 3.41 3.41 0 0 0 3.41 3.41 3.41 3.41 0 0 0 3.41-3.41 3.41 3.41 0 0 0-3.41-3.41z" />
-									</svg>
-								</a>
-								<a target="_blank" href="https://feazad.academia.edu/SamanIsmael" class="social-link">
-									<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<title>Academia</title>
-										<path
-											d="M22.033 21.18L13.77.459H7.869l1.049 2.623L1.836 21.18C1.574 22.098.787 22.23 0 22.361v1.18h6.82v-1.18C4.984 22.23 3.934 21.967 4.721 20c.131-.131.656-1.574 1.311-3.41h8.393l1.18 3.016c.131.525.262.918.262 1.311 0 1.049-.918 1.443-2.623 1.443v1.18H24v-1.18c-.918-.13-1.705-.393-1.967-1.18zM6.82 14.361a363.303 363.303 0 0 0 3.279-8.525l3.41 8.525H6.82z" />
-									</svg>
-								</a>
-								<a target="_blank" href="https://www.last.fm/user/samilsoft" class="social-link">
-									<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<title>Last.fm</title>
-										<path
-											d="M10.584 17.21l-.88-2.392s-1.43 1.594-3.573 1.594c-1.897 0-3.244-1.649-3.244-4.288 0-3.382 1.704-4.591 3.381-4.591 2.42 0 3.189 1.567 3.849 3.574l.88 2.749c.88 2.666 2.529 4.81 7.285 4.81 3.409 0 5.718-1.044 5.718-3.793 0-2.227-1.265-3.381-3.63-3.931l-1.758-.385c-1.21-.275-1.567-.77-1.567-1.595 0-.934.742-1.484 1.952-1.484 1.32 0 2.034.495 2.144 1.677l2.749-.33c-.22-2.474-1.924-3.492-4.729-3.492-2.474 0-4.893.935-4.893 3.932 0 1.87.907 3.051 3.189 3.601l1.87.44c1.402.33 1.869.907 1.869 1.704 0 1.017-.99 1.43-2.86 1.43-2.776 0-3.93-1.457-4.59-3.464l-.907-2.75c-1.155-3.573-2.997-4.893-6.653-4.893C2.144 5.333 0 7.89 0 12.233c0 4.18 2.144 6.434 5.993 6.434 3.106 0 4.591-1.457 4.591-1.457z" />
-									</svg>
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span>cat about.txt</span>
+                        </div>
+                        <div class="mb-4">
+                            <p>
 
-								</a>
-								<!-- <a target="_blank" href="https://500px.com/teal33t" class="social-link">
-									<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<title>500px</title>
-										<path
-											d="M7.451 8.9995A3.0005 3.0005 0 1 0 10.4514 12a3.0275 3.0275 0 0 0-3.0006-3.0005Zm0 5.371A2.3554 2.3554 0 1 1 9.7912 12a2.3704 2.3704 0 0 1-2.3404 2.3704Zm6.448-5.371A3.0005 3.0005 0 1 0 16.8997 12a3.0005 3.0005 0 0 0-3.0005-3.0005Zm0 5.371A2.3554 2.3554 0 1 1 16.2396 12a2.3314 2.3314 0 0 1-2.3404 2.3704zM2.29 10.7997a2.0224 2.0224 0 0 0-1.5903.42V9.6297h2.7005c.09 0 .15-.03.15-.3 0-.2701-.12-.2701-.18-.2701H.3997a.27.27 0 0 0-.27.27V11.97c0 .15.09.18.24.21a.228.228 0 0 0 .27-.06A1.7073 1.7073 0 0 1 2.14 11.4 1.5603 1.5603 0 0 1 3.4902 12.72 1.5183 1.5183 0 0 1 2.17 14.4004h-.18a1.5303 1.5303 0 0 1-1.4103-.9901c-.03-.09-.09-.15-.33-.06-.2401.09-.2701.15-.2401.24a2.1274 2.1274 0 0 0 2.7005 1.2602A2.1274 2.1274 0 0 0 3.9703 12.15 2.1004 2.1004 0 0 0 2.29 10.7998zm16.65-1.7703a1.6263 1.6263 0 0 0-1.4403 1.6203v2.6704c0 .15.12.18.3.18s.3001-.03.3001-.18v-2.6704a1.0082 1.0082 0 0 1 .8702-1.0202.9872.9872 0 0 1 .7501.24.9572.9572 0 0 1 .33.7202 1.2002 1.2002 0 0 1-.21.57A.9452.9452 0 0 1 19 11.55c-.12 0-.21 0-.24.27 0 .1801 0 .2701.15.3001a1.4763 1.4763 0 0 0 .8701-.18 1.6113 1.6113 0 0 0 .8702-1.2602 1.5543 1.5543 0 0 0-1.4463-1.6803.8311.8311 0 0 1-.264.03zm3.9307 1.5602 1.0802-1.0801c.03-.03.12-.12-.06-.3301a.3.3 0 0 0-.2101-.12.156.156 0 0 0-.12.06l-1.0802 1.0802-1.0802-1.1102c-.09-.09-.18-.06-.33.06-.15.12-.15.24-.06.33l1.0801 1.0802-1.0862 1.1102a.228.228 0 0 0-.06.12.252.252 0 0 0 .12.2101.483.483 0 0 0 .21.12.318.318 0 0 0 .1501-.06l1.0802-1.0802 1.0802 1.0802a.156.156 0 0 0 .12.06.3.3 0 0 0 .21-.12c.09-.12.12-.24.03-.3z" />
-									</svg>
-								</a> -->
-							</div>
+Greetings, fellow traveler of the digital realm. I am a freelance/individual developer and technology enthusiast.
+This is my virtual lair where I share my thoughts, projects, and digital artifacts.
+                            </p>
+                            <p>
+                                I think creating real software is not just about writing code or dealing with zeros and
+                                ones; it's about creating something 'soft.' It's a blend of art and logic, shaping ideas
+                                into functional reality.
+                            </p>
+                            <p>
+                                I write mostly about web development, automation tips, and open-source projects. I
+                                specialize in backend, as well as automation workflows, helping businesses streamline
+                                their operations and improve performance.
+                            </p>
+                        </div>
 
-						</div>
-					</div>
-				</div>
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span>ls -la /projects</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                                <h3 class="text-green-500 font-bold mb-2">Bypass ReCaptchaV2</h3>
+                                <a class="text-sm" href="https://github.com/teal33t/captcha_bypass" target="_blank">A
+                                    method base on Selenium and Buster extensions</a>
+                            </div>
+                            <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                                <h3 class="text-green-500 font-bold mb-2">Poopak</h3>
+                                <p class="text-sm">An experimental application for crawling, scanning and data gathering
+                                    from TOR hidden services.</p>
+                            </div>
+                            <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                                <h3 class="text-green-500 font-bold mb-2">Jyotish API</h3>
+                                <a href="https://github.com/teal33t/jyotish-api" target="_blank" class="text-sm">A
+                                    Self-Hosted REST API for Jyotiṣa (ज्योतिष) calculations.</a>
+                            </div>
+                            <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                                <h3 class="text-green-500 font-bold mb-2">Obfuscated OpenSSH Client</h3>
+                                <a href="https://github.com/teal33t/obfuscated-openssh-client" target="_blank"
+                                    class="text-sm">An OpenSSH client to connect to obfuscated SSH server. A secure
+                                    connection for bypass censorship.</a>
+                            </div>
+                            <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                                <h3 class="text-green-500 font-bold mb-2">Obfuscated OpenSSH Server</h3>
+                                <a href="https://github.com/teal33t/obfuscated-openssh-server" target="_blank"
+                                    class="text-sm">Docerized OpenSSH server with Obfuscated handshake, a secure connection for bypass censorship.</a>
+                            </div>
+                            <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                                <h3 class="text-green-500 font-bold mb-2">CISCO Bandwidth Optimizer</h3>
+                                <a href="https://github.com/teal33t/bandwith-optimizer" target="_blank"
+                                    class="text-sm">An application for managing Quality of Service (QoS) policies on
+                                    network devices</a>
+                            </div>
+                        </div>
 
-				<div class="col-12 col-lg-7">
-					<div class="card shadow-sm">
-						<div class="card-body">
-							<h3 class="card-title border-bottom border-primary pb-3 mb-4">About Me</h3>
-							<p class="lead bold mb-4 fw-light">I think creating real software is not just about writing
-								code or
-								dealing with zeros and ones; it's about creating something 'soft.' It's a blend of art
-								and logic, shaping ideas into functional reality.</p>
-							<p class="lead mb-4">
-								I write mostly about web development, automation tips, and open-source projects.
-								I specialize in backend, as well as automation workflows, helping businesses streamline their operations and improve
-								performance.
-							</p>
-							<div class="mt-4">
-								<a href="blog/index.html" class="btn btn-primary">Read My Blog</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="cursor"></span>
+                        </div>
+                    </div>
+                </div>
 
-			<div class="row g-4">
-				<div class="col-12">
-					<div class="card shadow-sm h-100">
-						<div class="card-body">
-							<h3 class="card-title border-bottom border-primary pb-3 mb-4"><a class="medium-head" href="https://medium.com/@teal33t" target="_blank">Latest Medium Posts</a></h3>
-							<ul id="medium-posts-list" class="list-unstyled lead" style="direction: ltr;"></ul>
-						</div>
-					</div>
-				</div>
+                <h2 class="text-2xl font-bold text-green-500 mb-4 hacker-font-fa" dir="rtl">مطالب فارسی</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 hacker-font-fa" dir="rtl">
+                    <div>
+                        <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                            <h3 class="text-green-500 font-bold mb-2">آموزش مهندسی پرامپت</h3>
+                            <a href="https://teal33t.github.io/prompt-engineering/" target="_blank"
+                                class="text-sm">ترجمه کتاب مهندسی پرامپت گوگل ۲۰۲۵</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border border-green-500 p-4 hover:bg-green-900 transition">
+                            <h3 class="text-green-500 font-bold mb-2">راهنمای حفاظت از اطلاعات شخصی در فضای دیجیتال</h3>
+                            <a href="#" target="_blank"
+                                class="text-sm">ترجمه‌ی گزیده‌های مهم از سند Surveillance Self-Defense</a>
+                        </div>
 
-			</div>
-		</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-green-500 mb-4 hacker-font">Highlight Writings</h2>
+                    <div class="border border-green-500 p-4 mb-4">
+                        <h3 class="text-green-300 font-bold mb-2">How to bypass reCaptcha V2 with Selenium?
+                        </h3>
+                        <p class="text-sm mb-2">In this tutorial, I will describe how to bypass re-captcha v2 (with
+                            challenge and interaction scoring), tested with Sync.me website to gather phone numbers.</p>
+                        <a target="_blank" href="https://medium.com/p/7f7a9a44fa9e"
+                            class="text-green-500 hover:underline text-xs" target="_blank">Read more →</a>
+                    </div>
+                    <div class="border border-green-500 p-4">
+                        <h3 class="text-green-300 font-bold mb-2">9 Tips for Building and Developing Secure PHP</h3>
+                        <p class="text-sm mb-2">Even seasoned developers face unexpected challenges — malformed data
+                            from a third-party API, a user inputting bizarre strings, or a silent failure that cascades
+                            into a security flaw.</p>
+                        <a target="_blank" href="https://medium.com/p/923b65ec0298"
+                            class="text-green-500 hover:underline text-xs">Read more →</a>
+                    </div>
+                    <div class="border border-green-500 p-4">
+                        <h3 class="text-green-300 font-bold mb-2">The Best Security Token? A Deep Dive into PASETO vs.
+                            JWT</h3>
+                        <p class="text-sm mb-2">
+                            In this article, we dive deep into the world of token-based authentication, comparing JWT
+                            and PASETO, and exploring why PASETO might be a better choice for your security needs.
+                        </p>
+                        <a target="_blank" href="https://medium.com/p/f084ed952586"
+                            class="text-green-500 hover:underline text-xs">Read more →</a>
+                    </div>
+                </div>
 
 
+                <div>
+                    <h2 class="text-2xl font-bold text-green-500 mb-4 hacker-font">Contact</h2>
+                    <div class="border border-green-500 p-4">
+                        <div class="mb-4">
+                            <label class="block text-green-300 text-sm mb-1">PGP Key</label>
+                            <div class="bg-black p-2 text-xs overflow-x-auto">
+                                <p>
+                                    -----BEGIN PGP PUBLIC KEY BLOCK-----
+                                </p>
+                                <p>
+                                    xsBNBGfv/poBCADxdbSN7r4FpgJzMnv+2lnE5kr4pBT69iB4FY+xBn/r8JXF
+                                    tE8BtUJVC1VFhzEWAV8ZEYmpYHKu872MEmgnhRZGuvfmQ+WXVlsqp17jdS+B
+                                    YRtMAnElhBqcOZ6HorXOjxVv8DkrKPlSEEIf7rXiTB79XexXAH9YGcmy6DIr
+                                    q2te48YmyyX/qS+8TZpX+Va9xtNr1mwWnzDaVOCuoSjGVKaPlqGkBH5LYm9Q
+                                    3wYr4M/JOHUXIZy1vacVOfpw65zjv6wi5nKDpYNgOeo1pFKrzsM0V/esA1iv
+                                    HXLW+DeP5ebddGX2aGsE4pzHpkiVXwPQsJQC+CJ+TQvPdf8Wov4++zfDABEB
+                                    AAHNGVNhbWFuIDx0ZWFsMzN0QGdtYWlsLmNvbT7CwIoEEAEIAD4Fgmfv/poE
+                                    CwkHCAmQ0DkcpF3pijcDFQgKBBYAAgECGQECmwMCHgEWIQQgeM9CC3Mn4aPs
+                                    tJjQORykXemKNwAAyp8IAJevVc3qUi24unvDRllH6XkufO1RQnd0TwP5KesI
+                                    FxzLkeRmclzIRa/xYzyfnC6G6kvwp9uloPkQxmQ+S5jscOQClCFtH1Z7XmxM
+                                    /1uIqbVcXsKAzh+GtkjbaUOr4jxWjSj02siziUUyAOg3rtYUfK7Mt0qpivKz
+                                    jKqi/imWvzCkZUrFdtSWQxfAYaSEkrbTxgSFLPguSpYcFW+NjTHicq5CA+4J
+                                    kZUXkip8FHXnwhnUC6TwvApCQ9q/askvw3jvAJ3ntFabT0FBJSZMDMpp+WvO
+                                    uwh/Sqk9SGoCDnf2rwrZE5jj2SD5yxgBOgHV4qoCjWl3ePA3glPumD24aEPB
+                                    0cDOwE0EZ+/+mgEIAL+zYHou/0Pa+uIj+gNwnAE75UEDvb6g3PXWp7+2s3Og
+                                    o2mE6AxaUc1EHmVlnscepolL4A2TOg263mz9DvAuXKpcmssd5pgzH6lXGFiU
+                                    V3nUxRPEDo4txfMBV6qKWC8qbk2+zJ0ASk3BJyoJYbDq3JXU4RirKRa87HNA
+                                    m83lOdHmBHyUqAXqTS7WDelJjtZQ2QRhl4cSvdT6/Aj7MzlPBwkTqOisjQci
+                                    mrLN5WAiVGEBiFchVxFbklIaQIllkvTipTVs1kcQ9sZmwJrFW+cUtBlmJx4X
+                                    NMUSJK8AKsmjzEixa354JQYusrxvwV6uPOU/O8c+FeJJhAmji7YjbmwSwrcA
+                                    EQEAAcLAdgQYAQgAKgWCZ+/+mgmQ0DkcpF3pijcCmwwWIQQgeM9CC3Mn4aPs
+                                    tJjQORykXemKNwAAyj8IANOPLLN3rqEnIVQdK4QDGCB0HW3ptxmTaH3H44oB
+                                    D/uXazAFCPAEL8nLRLfnvDrzh/vmUkV7hfBvbANMcVJE9fT3IUvbE28VtCwF
+                                    AUvgyxE4XOGnDLrB48SKCI8jf2NDcesJ5/6357BQSGWU0UxsPV0Ml0ZF8MpM
+                                    GHJ3JiXv0PVmSp33sXJGuT8zHSz9fxyn+PUyLSkVN923LomV+swvvxfToNPZ
+                                    dOo4XXBO0UeAKui8D883fbQWUOkkQYGgyhzjBxGF4mUlQH8r7U9/iVVS88qV
+                                    reJ3wWaoagn7gcQdFZ7pNhG6fpyVjFlY17EdTE+y5WwNN6htbSqBXIkBzLbX
+                                    ioE==4qCK
+                                </p>
+                                <p>
+                                    -----END PGP PUBLIC KEY BLOCK-----
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/teal33t" target="_blank"
+                                class="text-green-500 hover:text-green-300"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://x.com/teal33t" target="_blank"
+                                class="text-green-500 hover:text-green-300"><i class="fab fa-twitter"></i> Twitter</a>
+                            <!-- <a href="#" class="text-green-500 hover:text-green-300"><i class="fab fa-keybase"></i> Keybase</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 
-	<script>
+    <!-- Blog Tab -->
+    <!-- Removed blog tab and content as per user request -->
 
+    <!-- CV Tab -->
+    <div id="cv" class="tab-content">
+        <h2 class="text-3xl font-bold text-green-500 mb-6 hacker-font">Digital Resume</h2>
 
+        <div class="terminal mb-8">
+            <div class="terminal-header">
+                <div class="terminal-button bg-red-500"></div>
+                <div class="terminal-button bg-yellow-500"></div>
+                <div class="terminal-button bg-green-500"></div>
+                <div class="ml-2 text-sm">user@teal33t:~/cv</div>
+            </div>
+            <div class="terminal-body">
+                <div class="command-line">
+                    <span class="prompt">$</span>
+                    <span>cat resume.txt</span>
+                </div>
 
+                <div class="my-6">
+                    <h3 class="text-xl font-bold text-green-300 mb-4 border-b border-green-500 pb-2">Experience</h3>
 
-		// Fetch Medium posts
-		const mediumFeedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@teal33t";
+                    <div class="mb-6">
+                        <div class="flex justify-between">
+                            <h4 class="font-bold">Senior Security Researcher</h4>
+                            <span class="text-green-500 text-sm">2020 - Present</span>
+                        </div>
+                        <p class="text-sm mb-2">NullByte Security</p>
+                        <ul class="list-disc list-inside text-sm pl-4">
+                            <li>Led red team operations against Fortune 500 companies</li>
+                            <li>Developed custom exploitation tools and frameworks</li>
+                            <li>Discovered critical vulnerabilities in enterprise software</li>
+                        </ul>
+                    </div>
 
-		fetch(mediumFeedUrl)
-			.then(response => response.json())
-			.then(data => {
-				const posts = data.items.slice(0, 5); // Get the last 10 posts
-				const postsList = document.getElementById('medium-posts-list');
+                    <div class="mb-6">
+                        <div class="flex justify-between">
+                            <h4 class="font-bold">Penetration Tester</h4>
+                            <span class="text-green-500 text-sm">2017 - 2020</span>
+                        </div>
+                        <p class="text-sm mb-2">HackThePlanet Inc.</p>
+                        <ul class="list-disc list-inside text-sm pl-4">
+                            <li>Conducted security assessments for financial institutions</li>
+                            <li>Specialized in web application and network penetration testing</li>
+                            <li>Authored technical reports and presented findings to clients</li>
+                        </ul>
+                    </div>
 
-				posts.forEach(post => {
-					const listItem = document.createElement('li');
-					const link = document.createElement('a');
-					link.href = post.link;
-					link.textContent = post.title;
-					listItem.style = "padding: 10px;"
-					listItem.appendChild(link);
-					postsList.appendChild(listItem);
-				});
-			})
-			.catch(error => console.error('Error fetching Medium posts:', error));
-	</script>
+                    <h3 class="text-xl font-bold text-green-300 mb-4 border-b border-green-500 pb-2">Skills</h3>
 
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="font-bold mb-2">Technical Skills</h4>
+                            <div class="mb-2">
+                                <p class="text-sm mb-1">Reverse Engineering</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <p class="text-sm mb-1">Exploit Development</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <p class="text-sm mb-1">Network Security</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">Programming</h4>
+                            <div class="mb-2">
+                                <p class="text-sm mb-1">Python</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <p class="text-sm mb-1">C/C++</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <p class="text-sm mb-1">Assembly</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-green-300 mb-4 border-b border-green-500 pb-2">Certifications</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="border border-green-500 p-3 text-center">
+                            <p class="font-bold">OSCP</p>
+                            <p class="text-xs">Offensive Security</p>
+                        </div>
+                        <div class="border border-green-500 p-3 text-center">
+                            <p class="font-bold">OSCE</p>
+                            <p class="text-xs">Offensive Security</p>
+                        </div>
+                        <div class="border border-green-500 p-3 text-center">
+                            <p class="font-bold">CCIE Security</p>
+                            <p class="text-xs">Cisco</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-green-300 mb-4 border-b border-green-500 pb-2">Education</h3>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between">
+                            <h4 class="font-bold">PhD in Computer Science</h4>
+                            <span class="text-green-500 text-sm">2014 - 2017</span>
+                        </div>
+                        <p class="text-sm">University of Cyberspace</p>
+                        <p class="text-xs italic">Thesis: "Advanced Techniques in Memory Corruption Exploitation"</p>
+                    </div>
+                </div>
+
+                <div class="command-line">
+                    <span class="prompt">$</span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="hacker-btn px-6 py-3">
+                <i class="fas fa-download mr-2"></i> Download Full CV (PDF)
+            </button>
+        </div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 border-t border-green-500 pt-6 text-center text-sm">
+        <p>© 2025 teal33t | Last updated: <span id="last-updated">2025-4-15 03:14:07 UTC</span></p>
+        <p class="mt-2 text-green-500">root@teal33t:~# <span class="cursor"></span></p>
+    </footer>
+    </div>
+
+    <script>
+        // Matrix background effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+        const alphabet = katakana + latin + nums + symbols;
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00FF00';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+
+        // Tab switching
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+
+            // Update URL hash
+            window.location.hash = tabId;
+        }
+
+        // Check URL hash on load
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash && ['home', 'blog', 'cv'].includes(hash)) {
+                showTab(hash);
+            }
+        });
+
+        // Update last updated timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            const formatted = now.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
+            document.getElementById('last-updated').textContent = formatted;
+        }
+
+        updateTimestamp();
+        setInterval(updateTimestamp, 60000); // Update every minute
+    </script>
 </body>
 
 </html>
