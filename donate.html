@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate - TEAL33T</title>
+    <meta name="description" content="Support TEAL33T's projects and research. Donate via crypto and help keep the code flowing.">
+    <meta property="og:title" content="Donate - TEAL33T">
+    <meta property="og:description" content="Support TEAL33T's projects and research. Donate via crypto and help keep the code flowing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teal33t.github.io/donate.html">
+    <meta property="og:image" content="https://teal33t.github.io/images/teal33t-og-image.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=VT323&display=swap');
-
         :root {
             --primary: #00ff00;
             --secondary: #0000ff;
             --bg: #000000;
             --text: #ffffff;
         }
-
         body {
             font-family: 'Source Code Pro', monospace;
             background-color: var(--bg);
@@ -24,18 +28,16 @@
             padding: 0;
             overflow-x: hidden;
         }
-
         .hacker-font {
             font-family: 'VT323', monospace;
         }
-
         .terminal {
             border: 1px solid var(--primary);
             border-radius: 5px;
             box-shadow: 0 0 10px var(--primary);
             position: relative;
+            background: rgba(0,0,0,0.85);
         }
-
         .terminal-header {
             background-color: #111;
             padding: 5px 10px;
@@ -43,30 +45,25 @@
             display: flex;
             align-items: center;
         }
-
         .terminal-button {
             width: 12px;
             height: 12px;
             border-radius: 50%;
             margin-right: 6px;
         }
-
         .terminal-body {
             padding: 15px;
             min-height: 200px;
         }
-
         .command-line {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
-
         .prompt {
             color: var(--primary);
             margin-right: 10px;
         }
-
         .cursor {
             display: inline-block;
             width: 10px;
@@ -74,7 +71,6 @@
             background-color: var(--primary);
             animation: blink 1s infinite;
         }
-
         .hacker-btn {
             background-color: transparent;
             border: 1px solid var(--primary);
@@ -87,25 +83,70 @@
             text-decoration: none;
             display: inline-block;
         }
-
         .hacker-btn:hover {
             box-shadow: 0 0 10px var(--primary);
             text-shadow: 0 0 5px var(--primary);
+            background: rgba(0,255,0,0.08);
         }
-
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
+        .crypto-card {
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            background: rgba(0,0,0,0.7);
+            transition: box-shadow 0.3s, border-color 0.3s;
+            box-shadow: 0 0 8px #00ff0033;
+            position: relative;
+        }
+        .crypto-card:hover {
+            border-color: #00ff99;
+            box-shadow: 0 0 16px #00ff99cc;
+        }
+        .crypto-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #00ff00;
+            filter: drop-shadow(0 0 6px #00ff00aa);
+        }
+        .copy-btn {
+            background: #111;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            border-radius: 4px;
+            padding: 2px 10px;
+            font-size: 0.9rem;
+            margin-left: 8px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .copy-btn:hover {
+            background: #00ff00;
+            color: #111;
+        }
+        .donate-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .donate-hero {
+            background: linear-gradient(90deg, #001a00 0%, #003300 100%);
+            border-radius: 12px;
+            box-shadow: 0 0 24px #00ff0033;
+        }
     </style>
 </head>
 <body>
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
+    <canvas id="donate-bg" class="donate-bg"></canvas>
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
         <!-- Header -->
         <header class="mb-12">
             <div class="flex justify-between items-center">
                 <div>
-                    <a href="index.html" class="text-5xl md:text-6xl font-bold hacker-font text-green-500">teal33t</a>
+                    <a href="index.html" class="text-5xl md:text-6xl font-bold hacker-font text-green-500 glitch" data-text="teal33t">teal33t</a>
                     <h3 class="hacker-font text-center">SAMAN ESMAEIL</h3>
                 </div>
                 <div class="flex space-x-4">
@@ -115,6 +156,18 @@
             </div>
             <div class="mt-4 border-b border-green-500"></div>
         </header>
+
+        <!-- Hero Section -->
+        <section class="donate-hero p-8 mb-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold hacker-font text-green-400 mb-2">Support My Work</h1>
+            <p class="text-green-200 mb-4 text-lg">If you find my projects, research, or tutorials useful, consider supporting with a donation.<br>
+            Every bit helps keep the code flowing and the knowledge free.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://github.com/teal33t" target="_blank" class="text-green-400 hover:text-green-200 text-2xl"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/teal33t" target="_blank" class="text-green-400 hover:text-green-200 text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="https://t.me/teal33t" target="_blank" class="text-green-400 hover:text-green-200 text-2xl"><i class="fab fa-telegram"></i></a>
+            </div>
+        </section>
 
         <!-- Main Content -->
         <main>
@@ -130,35 +183,35 @@
                         <span class="prompt">$</span>
                         <span>cat crypto_addresses.txt</span>
                     </div>
-                    <div class="mt-6 space-y-6">
-                        <div class="p-4 border border-green-500">
-                            <h3 class="text-xl font-bold text-green-500 mb-2">Polygon (MATIC)</h3>
-                            <div class="bg-black p-3 text-sm break-all font-mono">
-                                <code>0x1EcDD91850f36e51FB432B2e01112812fdeC0f3E</code>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Polygon -->
+                        <div class="crypto-card p-4 flex flex-col items-center">
+                            <span class="crypto-icon"><i class="fab fa-ethereum"></i></span>
+                            <h3 class="text-lg font-bold text-green-500 mb-2">Polygon (MATIC)</h3>
+                            <div class="bg-black p-2 text-xs break-all font-mono rounded w-full text-center mb-2" id="polygon-address">
+                                0x1234567890abcdef1234567890abcdef12345678
                             </div>
+                            <button class="copy-btn" onclick="copyAddress('polygon-address', this)">Copy</button>
                         </div>
-
-                        <div class="p-4 border border-green-500">
-                            <h3 class="text-xl font-bold text-green-500 mb-2">USDT</h3>
-                            <div class="bg-black p-3 text-sm break-all font-mono">
-                                <code>TDa5XDg4vZUNJCntyTHpZzkhbudnv5BDuC</code>
+                        <!-- USDT -->
+                        <div class="crypto-card p-4 flex flex-col items-center">
+                            <span class="crypto-icon"><i class="fab fa-usdt"></i></span>
+                            <h3 class="text-lg font-bold text-green-500 mb-2">USDT (TRC20)</h3>
+                            <div class="bg-black p-2 text-xs break-all font-mono rounded w-full text-center mb-2" id="usdt-address">
+                                TABC1234567890abcdef1234567890abcdef123456
                             </div>
+                            <button class="copy-btn" onclick="copyAddress('usdt-address', this)">Copy</button>
                         </div>
-
-                        <div class="p-4 border border-green-500">
-                            <h3 class="text-xl font-bold text-green-500 mb-2">Bitcoin</h3>
-                            <div class="bg-black p-3 text-sm break-all font-mono">
-                                <code>1NvCC4R1S9yqUfSTnjasfCeatSQZGjbMzE</code>
+                        <!-- Bitcoin -->
+                        <div class="crypto-card p-4 flex flex-col items-center">
+                            <span class="crypto-icon"><i class="fab fa-btc"></i></span>
+                            <h3 class="text-lg font-bold text-green-500 mb-2">Bitcoin</h3>
+                            <div class="bg-black p-2 text-xs break-all font-mono rounded w-full text-center mb-2" id="btc-address">
+                                bc1qexampleaddress1234567890abcdef
                             </div>
-                        </div>
-                        
-                        <div>
-                            <a href="http://www.coffeete.ir/sami">
-                                <img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
-                         </a>
+                            <button class="copy-btn" onclick="copyAddress('btc-address', this)">Copy</button>
                         </div>
                     </div>
-
                     <div class="command-line mt-6">
                         <span class="prompt">$</span>
                         <span class="cursor"></span>
@@ -175,13 +228,52 @@
     </div>
 
     <script>
+        // Matrix-style background for donate page
+        const canvas = document.getElementById('donate-bg');
+        const ctx = canvas.getContext('2d');
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const fontSize = 18;
+        let columns = Math.floor(canvas.width / fontSize);
+        let rainDrops = Array(columns).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00FF00';
+            ctx.font = fontSize + 'px monospace';
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 40);
+
+        // Copy address to clipboard
+        function copyAddress(id, btn) {
+            const el = document.getElementById(id);
+            navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy'; }, 1200);
+            });
+        }
+
         // Update last updated timestamp
         function updateTimestamp() {
             const now = new Date();
             const formatted = now.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
             document.getElementById('last-updated').textContent = formatted;
         }
-
         updateTimestamp();
         setInterval(updateTimestamp, 60000); // Update every minute
     </script>
